@@ -23,7 +23,7 @@ class BiteBoxViewModel : ViewModel() {
             2,
             "Pizza Hawaiana",
             "Pizza con jamón y piña.",
-            11.00,
+            11.30,
             "Pizza",
             "https://images.unsplash.com/photo-1594007654729-407eedc4be65"
         ),
@@ -39,6 +39,16 @@ class BiteBoxViewModel : ViewModel() {
 
         Platillo(
             4,
+            "Pizza Margarita",
+            "Pizza con Salsa de tomate de San Marzano, mozzarella fresca, hojas de albahaca y un toque de aceite de oliva.Masa.",
+            14.50,
+            "Pizza",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgI9Od6nFmvyEjWe0voHqRkUSmrqypzJOC0Nmehzox-g&s=10"
+
+        ),
+
+        Platillo(
+            5,
             "Hamburguesa Clásica",
             "Hamburguesa de res con queso cheddar.",
             8.50,
@@ -47,21 +57,29 @@ class BiteBoxViewModel : ViewModel() {
         ),
 
         Platillo(
-            5,
+            6,
             "Hamburguesa BBQ",
             "Hamburguesa con salsa BBQ y tocino.",
-            10.00,
+            10.50,
             "Hamburguesa",
             "https://images.unsplash.com/photo-1550547660-d9450f859349"
         ),
 
         Platillo(
-            6,
-            "Hamburguesa Doble",
+            7,
+            "Hamburguesa Doble.",
             "Doble carne y doble queso.",
-            12.00,
+            12.75,
             "Hamburguesa",
             "https://images.unsplash.com/photo-1571091718767-18b5b1457add"
+        ),
+        Platillo(
+            8,
+            "Hamburguesa Vegetariana",
+            "Hamburguesa elaborada con proteína vegetal, lechuga, tomate y salsa especial.",
+            14.50,
+            "Hamburguesa",
+            "https://images.unsplash.com/photo-1520072959219-c595dc870360"
         )
     )
 

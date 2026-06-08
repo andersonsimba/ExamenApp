@@ -13,12 +13,18 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.examenapp.viewmodel.BiteBoxViewModel
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.ui.graphics.Color
+import android.widget.Toast
+import androidx.compose.ui.platform.LocalContext
 
 @Composable
 fun CartScreen(
     navController: NavController,
     viewModel: BiteBoxViewModel
 ) {
+    val context = LocalContext.current
+
 
     Scaffold { padding ->
 
@@ -82,11 +88,19 @@ fun CartScreen(
 
             Button(
                 onClick = {
+                    Toast.makeText(
+                        context,
+                        "Pedido éxitoso. ¡Gracias por su compra!",
+                        Toast.LENGTH_LONG
+                    ).show()
 
                     viewModel.vaciarCarrito()
 
                     navController.popBackStack()
                 },
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color(0xFF0D47A1)
+                ),
                 modifier = Modifier.fillMaxWidth()
             ) {
 

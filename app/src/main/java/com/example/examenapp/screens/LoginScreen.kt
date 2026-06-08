@@ -13,6 +13,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.ui.graphics.Color
 
 @Composable
 fun LoginScreen(
@@ -32,7 +34,7 @@ fun LoginScreen(
     ) {
 
         Text(
-            text = "BiteBox",
+            text = "BiteBox ",
             style = MaterialTheme.typography.headlineLarge
         )
 
@@ -42,7 +44,7 @@ fun LoginScreen(
                 nombre = it
             },
             label = {
-                Text("Ingrese su nombre")
+                Text("BiteBox ")
             }
         )
 
@@ -50,7 +52,10 @@ fun LoginScreen(
             onClick = {
                 navController.navigate("menu/$nombre")
             },
-            enabled = nombre.length > 3
+            enabled = nombre.length > 3,
+                    colors = ButtonDefaults.buttonColors(
+                    containerColor = Color(0xFF0D47A1)
+                    )
         ) {
             Text("Entrar")
         }

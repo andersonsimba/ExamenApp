@@ -7,8 +7,11 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import coil.compose.AsyncImage
 import com.example.examenapp.model.Platillo
@@ -44,7 +47,12 @@ fun MenuScreen(
         topBar = {
             TopAppBar(
                 title = {
-                    Text("Hola, $nombre")
+                    Text(
+                        text = "¡Bienvenido, $nombre! Explora nuestro menú",
+                        fontSize = 24.sp,
+                        fontWeight = FontWeight.Bold
+                    )
+
                 }
             )
         },
@@ -74,7 +82,10 @@ fun MenuScreen(
                 Button(
                     onClick = {
                         filtro = "Todos"
-                    }
+                    },
+                    colors = ButtonDefaults.buttonColors(
+                     containerColor = Color(0xFF0D47A1)
+                         )
                 ) {
                     Text("Todos")
                 }
@@ -82,7 +93,10 @@ fun MenuScreen(
                 Button(
                     onClick = {
                         filtro = "Pizza"
-                    }
+                    },
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = Color(0xFF0D47A1)
+                    )
                 ) {
                     Text("Pizzas")
                 }
@@ -90,7 +104,10 @@ fun MenuScreen(
                 Button(
                     onClick = {
                         filtro = "Hamburguesa"
-                    }
+                    },
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = Color(0xFF0D47A1)
+                    )
                 ) {
                     Text("Hamburguesas")
                 }
